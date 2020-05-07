@@ -1,0 +1,20 @@
+<html>
+<body>
+  <script type="text/javascript">
+    function appendState(statusString) {
+      var para = document.createElement("p");
+      var node = document.createTextNode("Visibility Changed: " + statusString);
+      para.appendChild(node);
+
+      var element = document.getElementById("updates");
+      element.appendChild(para);
+    }
+  
+    document.onvisibilitychange = function() {
+      appendState("YES!")
+    }
+  </script>
+  <div><p>Updates:</p></div>
+  <div id="updates"></div>
+</body>
+</html>
